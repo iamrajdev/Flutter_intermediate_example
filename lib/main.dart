@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_intermediate/action_chip/action_chip_example.dart';
+import 'package:flutter_intermediate/slider_indicator/slider_indicator.dart';
 
 void main() {
   runApp(
@@ -55,14 +56,28 @@ class _HomePageState extends State<HomePage> {
       child: Center(
         child: Column(
           children: [
+            //Action chip example
             ElevatedButton.icon(
-                label: const Text('Action chip example'),
+                label: const Text('Action chip '),
                 icon: const Icon(Icons.arrow_right),
                 onPressed: () {
                   Navigator.push(
                       context,
                       MaterialPageRoute(
                           builder: (context) => const ActionChipExample()));
+                }),
+
+            const SizedBox(height: 20),
+
+            //Slider & Indicator example
+            ElevatedButton.icon(
+                label: const Text('Slider & Indicator'),
+                icon: const Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const SliderIndicator()));
                 }),
           ],
         ),
