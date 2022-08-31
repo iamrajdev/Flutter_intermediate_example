@@ -33,23 +33,38 @@ class _MyAppState extends State<MyApp> {
         appBar: AppBar(
           title: const Text("Flutter Intermediate"),
         ),
-        body: Container(
-          padding: const EdgeInsets.all(32.0),
-          child: Center(
-            child: Column(
-              children: [
-                ElevatedButton.icon(
-                    label: const Text('Action chip example'),
-                    icon: const Icon(Icons.arrow_right),
-                    onPressed: () {
-                      Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                              builder: (context) => const ActionChipExample()));
-                    }),
-              ],
-            ),
-          ),
+        body: const HomePage(),
+      ),
+    );
+  }
+}
+
+/// Main page [HomePage]
+class HomePage extends StatefulWidget {
+  const HomePage({Key? key}) : super(key: key);
+
+  @override
+  State<HomePage> createState() => _HomePageState();
+}
+
+class _HomePageState extends State<HomePage> {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.all(32.0),
+      child: Center(
+        child: Column(
+          children: [
+            ElevatedButton.icon(
+                label: const Text('Action chip example'),
+                icon: const Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => const ActionChipExample()));
+                }),
+          ],
         ),
       ),
     );
