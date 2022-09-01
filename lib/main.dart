@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_intermediate/action_chip/action_chip_example.dart';
+import 'package:flutter_intermediate/expansion_panel/expansion_panel_example.dart';
 import 'package:flutter_intermediate/popup_menu_button/popup_menu_button.dart';
 import 'package:flutter_intermediate/slider_indicator/slider_indicator.dart';
 import 'package:flutter_intermediate/timer/indicator_timer.dart';
@@ -112,6 +113,21 @@ class _HomePageState extends State<HomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const IndicatorTimerExample(),
+                    ),
+                  );
+                }),
+
+            const SizedBox(height: 20),
+
+            //Expansion Panel
+            ElevatedButton.icon(
+                label: const Text('Expansion Panel'),
+                icon: const Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ExpansionPanelExample(),
                     ),
                   );
                 }),
