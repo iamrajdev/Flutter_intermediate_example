@@ -2,6 +2,7 @@ import 'package:device_preview/device_preview.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_intermediate/action_chip/action_chip_example.dart';
+import 'package:flutter_intermediate/popup_menu_button/popup_menu_button.dart';
 import 'package:flutter_intermediate/slider_indicator/slider_indicator.dart';
 
 void main() {
@@ -62,9 +63,11 @@ class _HomePageState extends State<HomePage> {
                 icon: const Icon(Icons.arrow_right),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const ActionChipExample()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ActionChipExample(),
+                    ),
+                  );
                 }),
 
             const SizedBox(height: 20),
@@ -75,9 +78,26 @@ class _HomePageState extends State<HomePage> {
                 icon: const Icon(Icons.arrow_right),
                 onPressed: () {
                   Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                          builder: (context) => const SliderIndicator()));
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const SliderIndicator(),
+                    ),
+                  );
+                }),
+
+            const SizedBox(height: 20),
+
+            //Popup Menu Button example
+            ElevatedButton.icon(
+                label: const Text('Popup Menu Button'),
+                icon: const Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const PopupMenuButtonExample(),
+                    ),
+                  );
                 }),
           ],
         ),
