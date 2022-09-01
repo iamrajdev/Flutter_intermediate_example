@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_intermediate/action_chip/action_chip_example.dart';
 import 'package:flutter_intermediate/popup_menu_button/popup_menu_button.dart';
 import 'package:flutter_intermediate/slider_indicator/slider_indicator.dart';
+import 'package:flutter_intermediate/timer/indicator_timer.dart';
 
 void main() {
   runApp(
@@ -96,6 +97,21 @@ class _HomePageState extends State<HomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const PopupMenuButtonExample(),
+                    ),
+                  );
+                }),
+
+            const SizedBox(height: 20),
+
+            //Timer Progress Bar
+            ElevatedButton.icon(
+                label: const Text('Timer Progress Bar'),
+                icon: const Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const IndicatorTimerExample(),
                     ),
                   );
                 }),
