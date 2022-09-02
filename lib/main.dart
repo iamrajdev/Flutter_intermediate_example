@@ -5,6 +5,7 @@ import 'package:flutter_intermediate/action_chip/action_chip_example.dart';
 import 'package:flutter_intermediate/expansion_panel/expansion_panel_example.dart';
 import 'package:flutter_intermediate/popup_menu_button/popup_menu_button.dart';
 import 'package:flutter_intermediate/slider_indicator/slider_indicator.dart';
+import 'package:flutter_intermediate/stepper/stepper.dart';
 import 'package:flutter_intermediate/tab_bar_view/tab_bar_view.dart';
 import 'package:flutter_intermediate/timer/indicator_timer.dart';
 
@@ -144,6 +145,21 @@ class _HomePageState extends State<HomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const TabBarViewExample(),
+                    ),
+                  );
+                }),
+
+            const SizedBox(height: 20),
+
+            //Stepper
+            ElevatedButton.icon(
+                label: const Text('Stepper'),
+                icon: const Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const StepperExample(),
                     ),
                   );
                 }),
