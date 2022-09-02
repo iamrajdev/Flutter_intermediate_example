@@ -3,6 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_intermediate/action_chip/action_chip_example.dart';
 import 'package:flutter_intermediate/expansion_panel/expansion_panel_example.dart';
+import 'package:flutter_intermediate/grid_view/grid_view.dart';
 import 'package:flutter_intermediate/popup_menu_button/popup_menu_button.dart';
 import 'package:flutter_intermediate/slider_indicator/slider_indicator.dart';
 import 'package:flutter_intermediate/stepper/stepper.dart';
@@ -160,6 +161,21 @@ class _HomePageState extends State<HomePage> {
                     context,
                     MaterialPageRoute(
                       builder: (context) => const StepperExample(),
+                    ),
+                  );
+                }),
+
+            const SizedBox(height: 20),
+
+            //Grid View
+            ElevatedButton.icon(
+                label: const Text('Grid View'),
+                icon: const Icon(Icons.arrow_right),
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const GridViewExample(),
                     ),
                   );
                 }),
